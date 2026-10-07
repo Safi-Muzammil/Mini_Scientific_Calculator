@@ -21,7 +21,12 @@ def Mul(a, b):
     return a * b
 
 def Div(a, b):
-    return a / b
+    if b != 0:
+        return a / b 
+    else:
+        return "Error, Division by zero!"
+
+        
 
 
 
@@ -29,11 +34,23 @@ def Div(a, b):
 
 while True:
     Menu()
+    try:
 
-    choice = int(input("Choose option: "))
 
-    num_one = float(input("Enter first number: "))
-    num_two = float(input("Enter second number: "))
+        choice = int(input("Choose option: "))
+
+    except ValueError:
+        print("Invalid input! Please choose options 1 to 4.")
+
+    try:
+
+
+        num_one = float(input("Enter first number: "))
+        num_two = float(input("Enter second number: "))
+
+    except ValueError:
+        print("Invalid input! Please enter only numbers.")
+        continue
 
     if choice == 1:
         print("Result: ", Add(num_one, num_two))
