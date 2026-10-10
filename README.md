@@ -19,19 +19,6 @@ A menu-driven scientific calculator built with Python that performs basic arithm
 - Python 3
 - Built-in `math` module
 
-## How to Run
-
-1. Clone this repository:
-
-   ```bash
-   git clone <YOUR-REPOSITORY-URL>
-   ```
-
-2. Navigate to the project folder and run:
-
-   ```bash
-   python calculator.py
-   ```
 
 ## Concepts Practised
 
@@ -41,11 +28,5 @@ A menu-driven scientific calculator built with Python that performs basic arithm
 - User input and type conversion
 - Mathematical operations and input validation
 
-## Future Improvements
-
-- Add a graphical user interface (GUI)
-- Implement calculation history
-- Refactor using object-oriented programming (OOP)
-- Add automated tests
 
 
