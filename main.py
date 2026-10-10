@@ -41,7 +41,7 @@ def Power(a, b):
 
 def square_root(num):
     if num >= 0:
-        return math.sqrt(number)
+        return math.sqrt(num)
     else:
         return "Error, Square root of negative number!"
 def Factorial(num):
@@ -89,7 +89,10 @@ while True:
         choice = int(input("Choose option: "))
 
     except ValueError:
-        print("Invalid input! Please choose options 1 to 4.")
+        print("Invalid input! Please choose options 1 to 13.")
+        continue
+    if choice < 1 or choice > 13:
+        print("Invalid choice! Please choose option 1 to 13.")
         continue
 
     if choice == 13:
@@ -108,8 +111,23 @@ while True:
             print("Invalid input! Please enter only numbers.")
             continue
 
+    if choice == 1:
+        print("Result: ", Add(num_one, num_two))
+    
+    elif choice == 2:
+        print("Result: ", Sub(num_one, num_two))
+    
+    elif choice == 3:
+        print("Result: ", Mul(num_one, num_two))
+    
+    elif choice == 4:
+        print("Result: ", Div(num_one, num_two))
+    
+    elif choice == 5:
+        print("Result: ", Power(num_one, num_two))
+
     # operations that needs solely one number.
-    if choice in [6, 7, 8, 9, 10, 11, 12]:
+    elif choice in [6, 7, 8, 9, 10, 11, 12]:
 
         try:
 
@@ -119,47 +137,28 @@ while True:
             print("Error, Please enter only numbers.")
             continue
 
+    if choice == 6:
+        print("Result: ", square_root(number))
 
-        if choice == 1:
-            print("Result: ", Add(num_one, num_two))
+    elif choice == 7:
+        print("Result: ", Factorial(number))
 
-        elif choice == 2:
-            print("Result: ", Sub(num_one, num_two))
+    elif choice == 8:
+        print("Result: ", Natura_log(number))
 
-        elif choice == 3:
-            print("Result: ", Mul(num_one, num_two))
+    elif choice == 9:
+        print("Result: ", Log_wiht_base_ten(number))
 
-        elif choice == 4:
-            print("Result: ", Div(num_one, num_two))
+    elif choice == 10:
+        print("Result: ", Sine(number))
 
-        elif choice == 5:
-                print("Result: ", Power(num_one, num_two))
+    elif choice == 11:
+        print("Result: ", Cosine(number))
 
-        elif choice == 6:
-            print("Result: ", square_root(number))
+    elif choice == 12:
+        print("Result: ", Tangent(number))
 
-        elif choice == 7:
-            print("Result: ", Factorial(number))
-
-        elif choice == 8:
-            print("Result: ", Natura_log(number))
-
-        elif choice == 9:
-            print("Result: ", Log_wiht_base_ten(number))
-
-        elif choice == 10:
-            print("Result: ", Sine(number))
-
-        elif choice == 11:
-            print("Result: ", Cosine(number))
-
-        elif choice == 12:
-            print("Result: ", Tangent(number))
-
-        else:
-            print("Invalid input!")
-
-        Perform_again = input("Do you want to perform another calculation? (yes/no)").lower()
-        if Perform_again != "yes":
-            print("Thank You!")
-            break
+    Perform_again = input("Do you want to perform another calculation? (yes/no)").lower()
+    if Perform_again != "yes":
+        print("Thank You!")
+        break
